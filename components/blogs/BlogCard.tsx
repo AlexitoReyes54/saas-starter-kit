@@ -18,6 +18,8 @@ const BlogCard = (props: BlogCardProps) => {
           alt="blog image"
           className=" w-full h-64 object-cover"
           src={props.image}
+          width={300}
+          height={200}
         />
         <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

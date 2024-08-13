@@ -48,6 +48,8 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
             alt='blog image'
             src={post.image}
             className="mt-8 object-cover w-full h-96"
+            width={800}
+            height={400}
           />
         </div>
 
