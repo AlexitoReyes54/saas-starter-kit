@@ -1,14 +1,12 @@
 import React from 'react';
-import { NextPageWithLayout } from 'types';
 import { type ReactElement } from 'react';
-import { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { marked } from 'marked';
 import PublicLayout from '@/components/layouts/PublicLayout';
 import Head from 'next/head';
 import BlogCard from '@/components/blogs/BlogCard';
+import { useTranslation } from 'next-i18next';
 
 interface BlogMarkdown {
     author: string;
@@ -22,6 +20,7 @@ interface BlogMarkdown {
   }
 
 function BlogIndex(props: { blogs: BlogMarkdown[] }) {
+  const { t } = useTranslation('common');
   return (
     <div>
       <Head>
@@ -30,7 +29,7 @@ function BlogIndex(props: { blogs: BlogMarkdown[] }) {
 
       <div className="container mx-auto mt-12 p-4 ">
         <h1 className="text-4xl font-bold">
-          Here you can find testers experiences
+          {t('blog-list-title')}
         </h1>
         <hr className="my-8" />
 
@@ -52,7 +51,7 @@ function BlogIndex(props: { blogs: BlogMarkdown[] }) {
   );
 }
 
-export const getStaticProps = async ({ params })=> {
+export const getStaticProps = async ()=> {
   const files = fs.readdirSync('data/blogs');
   const blogs = files.map((filename) => {
     const markdownWithMetadata = fs.readFileSync(

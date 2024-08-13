@@ -1,8 +1,8 @@
 import React from 'react';
 import { NextPageWithLayout } from 'types';
 import { type ReactElement } from 'react';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import fs, { link } from 'fs';
+import { GetStaticPaths } from 'next';
+import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
@@ -10,6 +10,7 @@ import PublicLayout from '@/components/layouts/PublicLayout';
 
 import Author from '@/components/blogs/Author';
 import Head from 'next/head';
+import Image from 'next/image';
 
 interface BlogProps {
   title: string;
@@ -43,7 +44,8 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
         />
 
         <div className="flex justify-center">
-          <img
+          <Image
+            alt='blog image'
             src={post.image}
             className="mt-8 object-cover w-full h-96"
           />
