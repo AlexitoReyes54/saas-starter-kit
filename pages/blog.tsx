@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import PublicLayout from '@/components/layouts/PublicLayout';
 import Head from 'next/head';
 import BlogCard from '@/components/blogs/BlogCard';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 interface BlogMarkdown {
     author: string;
