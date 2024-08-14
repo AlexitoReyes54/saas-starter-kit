@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-//import Image from 'next/image';
+import Image from 'next/image';
 
 interface BlogCardProps {
   title: string;
@@ -14,7 +14,7 @@ const BlogCard = (props: BlogCardProps) => {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-sm shadow dark:bg-gray-800 dark:border-gray-700">
       <Link href={`/blog/${props.slug}`}>
-        <img
+        <Image
           alt="blog image"
           className=" w-full h-64 object-cover"
           src={props.image}
