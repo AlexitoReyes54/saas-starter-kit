@@ -13,6 +13,7 @@ import env from '@/lib/env';
 import { Theme, applyTheme } from '@/lib/theme';
 import { Themer } from '@boxyhq/react-ui/shared';
 import { AccountLayout } from '@/components/layouts';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const { session, ...props } = pageProps;
@@ -41,6 +42,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <title>{app.name}</title>
         <link rel="icon" href="/img/bugbashparty.ico" />
       </Head>
+      <GoogleAnalytics 
+        gaId={env.googleAnalyticsID || ''}
+      />
       <SessionProvider session={session}>
         <Toaster toastOptions={{ duration: 4000 }} />
         <Themer

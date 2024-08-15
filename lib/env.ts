@@ -1,6 +1,7 @@
 import type { SessionStrategy } from 'next-auth';
 
 const env = {
+  googleAnalyticsID: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
   databaseUrl: `${process.env.DATABASE_URL}`,
   appUrl: `${process.env.APP_URL}`,
   redirectIfAuthenticated: '/dashboard',
