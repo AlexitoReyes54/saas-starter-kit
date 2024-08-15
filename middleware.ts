@@ -25,6 +25,7 @@ const unAuthenticatedRoutes = [
   '/blog/*',
   '/img/*',
   '/sitemap.xml',
+  '/sitemap-0.xml',
   '/robots.txt',
   '/favicon.ico',
 ];
