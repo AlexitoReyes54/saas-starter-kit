@@ -6,10 +6,10 @@ import matter from 'gray-matter';
 import PublicLayout from '@/components/layouts/PublicLayout';
 import Head from 'next/head';
 import BlogCard from '@/components/blogs/BlogCard';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 import { GetServerSidePropsContext } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import BlogMarkdown  from '../interfaces/BlogMarkdown';
+import BlogMarkdown from '../interfaces/BlogMarkdown';
 
 function BlogIndex(props: { blogs: BlogMarkdown[] }) {
   const { t } = useTranslation('common');
@@ -20,30 +20,40 @@ function BlogIndex(props: { blogs: BlogMarkdown[] }) {
       </Head>
 
       <div className="container mx-auto mt-12 p-4 ">
-        <h1 className="text-4xl font-bold">
-          {t('blog-list-title')}
-        </h1>
+        <h1 className="text-4xl font-bold">{t('blog-list-title')}</h1>
         <hr className="my-8" />
 
-        <div className="grid grid-cols-3 gap-4">
+        <div
+          className="grid gap-4 
+          lg:grid-cols-3
+          md:grid-cols-3 
+          sm:grid-cols-1 
+          xs:grid-cols-1 
+
+          sm:items-center
+          sm:justify-items-center
+
+          xs:items-center 
+          xs:justify-items-center
+         "
+        >
           {props.blogs.map((blog) => (
             <BlogCard
-                key={blog.slug}
-                title={blog.title}
-                date={blog.date}
-                description={blog.description}
-                image={blog.image}
-                slug={blog.slug}
+              key={blog.slug}
+              title={blog.title}
+              date={blog.date}
+              description={blog.description}
+              image={blog.image}
+              slug={blog.slug}
             />
-          ))    
-        }
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-export const getStaticProps = async ({ locale }: GetServerSidePropsContext)=> {
+export const getStaticProps = async ({ locale }: GetServerSidePropsContext) => {
   const files = fs.readdirSync('data/blogs');
   const blogs = files.map((filename) => {
     const markdownWithMetadata = fs.readFileSync(
