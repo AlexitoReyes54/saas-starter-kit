@@ -12,6 +12,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetServerSidePropsContext } from 'next';
+import BlogRedirectCta from '@/components/blogs/BlogRedirectCta';
 
 interface BlogProps {
   title: string;
@@ -46,7 +47,7 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
 
         <div className="flex justify-center">
           <Image
-            alt='blog image'
+            alt="blog image"
             src={post.image}
             className="mt-8 object-cover w-full h-96"
             width={800}
@@ -57,9 +58,12 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
         <hr className="my-8" />
 
         <div
-          className="blog-content"
+          className="blog-content font-bold"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        <BlogRedirectCta />
+
       </div>
     </div>
   );
@@ -79,8 +83,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params, locale }: GetServerSidePropsContext, 
-) => {
+export const getStaticProps = async ({
+  params,
+  locale,
+}: GetServerSidePropsContext) => {
   const { slug } = params!;
   const postsDirectory = path.join(process.cwd(), 'data/blogs');
   const filePath = path.join(postsDirectory, `${slug}.md`);
