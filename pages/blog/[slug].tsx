@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import PublicLayout from '@/components/layouts/PublicLayout';1
+import PublicLayout from '@/components/layouts/PublicLayout';
 import Author from '@/components/blogs/Author';
 import Head from 'next/head';
 import Image from 'next/image';
