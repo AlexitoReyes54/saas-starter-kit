@@ -19,13 +19,13 @@ function Navbar() {
 
         <li className="hidden sm:block">
             <Link href="/blog" className="btn btn-ghost ">
-              Blogs
+              {t('blog')}
             </Link>
           </li>
-          
+
           <li className="">
             <Link href="/" className="btn btn-ghost">
-              Home
+              {t('home')}
             </Link>
           </li>
         
