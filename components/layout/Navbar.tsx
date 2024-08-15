@@ -10,18 +10,26 @@ function Navbar() {
     <div className="navbar bg-base-100 px-0 sm:px-1">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost text-xl normal-case">
-         
-          <Image 
-            src="/img/bugbashPet2.png"
-            alt="logo"
-            width={40}
-            height={40}
-          />
-           {t('navbar-title')}
+          <Image src="/img/bugbashPet2.png" alt="logo" width={40} height={40} />
+          {t('navbar-title')}
         </Link>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal flex items-center gap-2 sm:gap-4"></ul>
+        <ul className="menu menu-horizontal flex items-center gap-2 sm:gap-4">
+
+        <li className="hidden sm:block">
+            <Link href="/blog" className="btn btn-ghost ">
+              Blogs
+            </Link>
+          </li>
+          
+          <li className="">
+            <Link href="/" className="btn btn-ghost">
+              Home
+            </Link>
+          </li>
+        
+        </ul>
       </div>
     </div>
   );

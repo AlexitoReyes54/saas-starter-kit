@@ -19,7 +19,7 @@ const Author: React.FC<AuthorProps> = (props: AuthorProps) => {
           className="rounded-full w-10 h-10"
         />
         <div>
-          <p className="text-base-600">{props.name}</p>
+          <p className="text-base-600 font-bold">{props.name}</p>
           <p className="text-sm text-base-500">{props.socialMediaUsername}</p>
         </div>
       </div>
