@@ -6,7 +6,7 @@ author: "Alexander Elias Reyes Brazoban"
 twiter: "https://x.com/ABrzoban"
 twiterUsername: "@ABrzoban"
 authorImage: "https://pbs.twimg.com/profile_images/1718356168781729792/qRiC-vXL_400x400.jpg"
-image: "/bar.jpeg"
+image: "/img/bar.jpeg"
 linkedin: "https://www.linkedin.com/in/alexander-reyes-863a01180/"
 description: "pequeños problemas que no afectan significativamente la funcionalidad del software, hasta errores críticos que pueden causar "
 ---

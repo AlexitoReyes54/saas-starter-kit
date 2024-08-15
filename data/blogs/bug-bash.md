@@ -6,7 +6,7 @@ author: "Alexander Elias Reyes Brazoban"
 twiter: "https://x.com/ABrzoban"
 twiterUsername: "@ABrzoban"
 authorImage: "https://pbs.twimg.com/profile_images/1718356168781729792/qRiC-vXL_400x400.jpg"
-image: "/es-bug.jpeg"
+image: "/img/es-bug.jpeg"
 linkedin: "https://www.linkedin.com/in/alexander-reyes-863a01180/"
 description: "Entender la naturaleza de los bugs y cómo abordarlos es crucial para garantizar la calidad del software y una experiencia de usuario satisfactoria."
 ---
