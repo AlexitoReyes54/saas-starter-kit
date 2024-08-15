@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bugbashparty.tools
+
+# Sitemaps
+Sitemap: https://bugbashparty.tools/sitemap.xml
