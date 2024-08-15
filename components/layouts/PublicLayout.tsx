@@ -13,6 +13,7 @@ export default function PublicLayout({ children }: AccountLayoutProps) {
         <Navbar />
         {children}
       </div>
+
       <Footer />
     </div>
   );

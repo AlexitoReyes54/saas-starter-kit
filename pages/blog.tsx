@@ -7,17 +7,9 @@ import PublicLayout from '@/components/layouts/PublicLayout';
 import Head from 'next/head';
 import BlogCard from '@/components/blogs/BlogCard';
 import { useTranslation } from "next-i18next";
-
-interface BlogMarkdown {
-    author: string;
-    date: string;
-    description: string;
-    linkedin: string;
-    slug: string;
-    title: string;
-    twitter: string;
-    image: string;
-  }
+import { GetServerSidePropsContext } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import BlogMarkdown  from '../interfaces/BlogMarkdown';
 
 function BlogIndex(props: { blogs: BlogMarkdown[] }) {
   const { t } = useTranslation('common');
@@ -51,7 +43,7 @@ function BlogIndex(props: { blogs: BlogMarkdown[] }) {
   );
 }
 
-export const getStaticProps = async ()=> {
+export const getStaticProps = async ({ locale }: GetServerSidePropsContext)=> {
   const files = fs.readdirSync('data/blogs');
   const blogs = files.map((filename) => {
     const markdownWithMetadata = fs.readFileSync(
@@ -64,6 +56,7 @@ export const getStaticProps = async ()=> {
 
   return {
     props: {
+      ...(locale ? await serverSideTranslations(locale, ['common']) : {}),
       blogs,
     },
   };

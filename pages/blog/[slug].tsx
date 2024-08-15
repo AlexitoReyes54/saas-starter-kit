@@ -6,11 +6,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import PublicLayout from '@/components/layouts/PublicLayout';
-
+import PublicLayout from '@/components/layouts/PublicLayout';1
 import Author from '@/components/blogs/Author';
 import Head from 'next/head';
 import Image from 'next/image';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetServerSidePropsContext } from 'next';
 
 interface BlogProps {
   title: string;
@@ -78,7 +79,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params, locale }: GetServerSidePropsContext, 
+) => {
   const { slug } = params!;
   const postsDirectory = path.join(process.cwd(), 'data/blogs');
   const filePath = path.join(postsDirectory, `${slug}.md`);
@@ -88,6 +90,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: {
+      ...(locale ? await serverSideTranslations(locale, ['common']) : {}),
       title: data.title,
       date: data.date,
       content: htmlContent,
