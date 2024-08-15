@@ -24,6 +24,9 @@ const unAuthenticatedRoutes = [
   '/blog',
   '/blog/*',
   '/img/*',
+  '/sitemap.xml',
+  '/robots.txt',
+  '/favicon.ico',
 ];
 
 export default async function middleware(req: NextRequest) {
