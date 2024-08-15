@@ -13,12 +13,12 @@ const HeroSection = () => {
             {t('hero-subtitle')}
           </p>
           <div className="flex items-center justify-center gap-2 ">
-            <Link
+            {/* <Link
               href="/"
               className="btn btn-primary px-8 no-underline"
             >
               {t('hero-primary-btn')}
-            </Link>
+            </Link> */}
             <Link
               href="/blog"
               className="btn btn-outline px-8"
