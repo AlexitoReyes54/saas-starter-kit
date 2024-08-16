@@ -1,14 +1,15 @@
 ---
 title: "Bug Bash? Sorry, I have no idea what you’re talking about."
-date: "15-08-15"
+date: "15-08-2024"
 slug: "bug-bash-sorry-no-idea-what-youre-talking-about"
 image: "/img/bug3.webp"
+description: "Explores the concept of bug bashes, a collaborative testing practice that brings together cross-functional teams to quickly uncover hidden issues in software. Learn how this approach can enhance the quality of your releases, especially in humble teams without extensive QA resources.."
+
 author: "Alexander Elias Reyes Brazoban"
 twiter: "https://x.com/ABrzoban"
 twiterUsername: "@ABrzoban"
 authorImage: "https://pbs.twimg.com/profile_images/1718356168781729792/qRiC-vXL_400x400.jpg"
 linkedin: "https://www.linkedin.com/in/alexander-reyes-863a01180/"
-description: "Explores the concept of bug bashes, a collaborative testing practice that brings together cross-functional teams to quickly uncover hidden issues in software. Learn how this approach can enhance the quality of your releases, especially in humble teams without extensive QA resources.."
 ---
 
 Hey there, friend! I’m reaching out from the forgotten corners of the internet to share a little gem I’ve stumbled upon after getting lost in the world of manual testing. Today, let’s dive into why bug bashes are the unacknowledged elephant in the room when it comes to testing.

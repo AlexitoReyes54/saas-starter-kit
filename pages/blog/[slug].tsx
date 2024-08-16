@@ -24,6 +24,7 @@ interface BlogProps {
   auhorImage: string;
   twiter: string;
   twiterUsername: string;
+  slug: string;
 }
 
 const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
@@ -62,8 +63,7 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        <BlogRedirectCta />
-
+        <BlogRedirectCta slug={post.slug} />
       </div>
     </div>
   );
@@ -106,6 +106,7 @@ export const getStaticProps = async ({
       auhorImage: data.authorImage,
       twiter: data.twiter,
       twiterUsername: data.twiterUsername,
+      slug: data.slug,
     },
   };
 };

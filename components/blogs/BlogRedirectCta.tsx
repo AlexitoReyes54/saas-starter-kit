@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-daisyui';
 import { useTranslation } from 'next-i18next';
+import { sendGAEvent } from '@next/third-parties/google';
 
-const BlogRedirectCta = () => {
+interface BlogRedirectCtaProps {
+  slug: string;
+}
+
+function BlogRedirectCta({ slug }: BlogRedirectCtaProps): React.ReactElement {
   const { t } = useTranslation('common');
+
+  const handleClick = (slug: string) => {
+    sendGAEvent({ event: 'blog_cta_button_click', value: slug || 'unknown' });
+  };
 
   return (
     <div
@@ -13,15 +22,19 @@ const BlogRedirectCta = () => {
     >
       <h2 className="text-2xl font-bold mb-4">
         {t('bug_bash_4x_more_efficiently')}
-        {t}
       </h2>
       <p>{t('start_bug_bashing_with_agile_approach')}</p>
 
-      <Link type="button" className="btn btn-outline mt-4">
+      <Link
+        href="/"
+        type="button"
+        className="btn btn-outline mt-4"
+        onClick={() => handleClick(slug)}
+      >
         {t('lets_get_started')}
       </Link>
     </div>
   );
-};
+}
 
 export default BlogRedirectCta;

@@ -1,14 +1,15 @@
 ---
-title: "Los Bugs en el Desarrollo de Software: Desafíos y Soluciones"
-date: "2024-08-12"
+title: "En el desarrollo de software"
+date: "15-08-2024"
 slug: "demo"
+image: "/img/bug6.webp"
+description: "Explores the concept of bug bashes, a collaborative testing practice that brings together cross-functional teams to quickly uncover hidden issues in software. Learn how this approach can enhance the quality of your releases, especially in humble teams without extensive QA resources.."
+
 author: "Alexander Elias Reyes Brazoban"
-authorImage: "https://pbs.twimg.com/profile_images/1718356168781729792/qRiC-vXL_400x400.jpg"
 twiter: "https://x.com/ABrzoban"
 twiterUsername: "@ABrzoban"
-image: "/img/bug1.webp"
+authorImage: "https://pbs.twimg.com/profile_images/1718356168781729792/qRiC-vXL_400x400.jpg"
 linkedin: "https://www.linkedin.com/in/alexander-reyes-863a01180/"
-description: "En el desarrollo de software, los bugs son una realidad inevitable que todos los desarrolladores enfrentan"
 ---
 
 En el desarrollo de software, los bugs son una realidad inevitable que todos los desarrolladores enfrentan. Estos errores pueden variar en gravedad, desde pequeños problemas que no afectan significativamente la funcionalidad del software, hasta errores críticos que pueden causar fallos graves o pérdida de datos. Entender la naturaleza de los bugs y cómo abordarlos es crucial para garantizar la calidad del software y una experiencia de usuario satisfactoria.
