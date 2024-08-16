@@ -16,6 +16,7 @@ function BlogIndex(props: { blogs: BlogMarkdown[] }) {
   return (
     <div>
       <Head>
+        <title>{t('blog-list-pagetitle')}</title>
         <meta name="robots" content="index, follow" />
       </Head>
 
