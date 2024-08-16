@@ -117,17 +117,19 @@ p {
     font-size: 2rem; /* Tamaño de fuente mediano para subtítulos */
     margin-bottom: 0.75rem;
     color: #333; /* Color de texto estándar */
+    font-weight: 700;
   }
   
   h3 {
     font-size: 1.75rem; /* Tamaño de fuente más pequeño para sub-subtítulos */
     margin-bottom: 0.5rem;
     color: #444; /* Color de texto más claro */
+    font-weight: 700;
   }
   
   /* Estilo para párrafos */
   p {
-    font-size: 1rem; /* Tamaño de fuente estándar para párrafos */
+    font-size: 1.3rem !important; /* Tamaño de fuente estándar para párrafos */
     margin-bottom: 1rem; /* Espacio inferior entre párrafos */
   }
   

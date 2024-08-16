@@ -58,7 +58,7 @@ const Blog: NextPageWithLayout<BlogProps> = (post: BlogProps) => {
         <hr className="my-8" />
 
         <div
-          className="blog-content font-bold"
+          className="blog-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
