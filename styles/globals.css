@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Colores globales */
+.colors {
+  /* CSS HEX */
+  --imperial-red: #fe3146ff;
+  --black: #000000ff;
+  --prussian-blue: #11283eff;
+  --black-2: #000000ff;
+  --paynes-gray: #5b6e7eff;
+
+  /* CSS HSL */
+  --imperial-red: hsla(354, 99%, 59%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --prussian-blue: hsla(209, 57%, 15%, 1);
+  --black-2: hsla(0, 0%, 0%, 1);
+  --paynes-gray: hsla(207, 16%, 43%, 1);
+}
+
+
 :root {
   color-scheme: dark light;
 }
