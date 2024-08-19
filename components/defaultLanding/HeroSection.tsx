@@ -1,37 +1,32 @@
-import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import CTAButton from './CTAButton';
 
 const HeroSection = () => {
   const { t } = useTranslation('common');
-  
+
   return (
-    <div className="hero py-52">
-      <div className="hero-content text-center">
-        <div className="max-w-7xl">
-          <h1 className="text-5xl font-bold"> {t('navbar-title')}</h1>
-          <p className="py-6 text-2xl font-normal">
-            {t('hero-subtitle')}
+    <section className="bg-white dark:bg-gray-900 mt-14">
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+            {t('heroSection-title')}
+          </h1>
+          <p className="max-w-2xl mb-2 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            {t('heroSection-subtitle')}
           </p>
-          <div className="flex items-center justify-center gap-2 ">
-            {/* <Link
-              href="/"
-              className="btn btn-primary px-8 no-underline"
-            >
-              {t('hero-primary-btn')}
-            </Link> */}
-            <Link
-              href="/blog"
-              className="btn btn-outline px-8"
-            >
-              {t('hero-secundary-btn')}
-            </Link>
-          </div>
+          <CTAButton text="Alright, I’m In. Show Me the Stuff!" />
+        </div>
+        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            src="/img/home/collaboration.svg"
+            alt="mockup"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
-
 
 export default HeroSection;
