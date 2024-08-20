@@ -11,12 +11,12 @@ const Footer = () => {
         </p>
         <ul className="flex flex-wrap justify-center items-center mb-6 text-white">
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/blog" className="mr-4 hover:underline md:mr-6">
               {t('blog')}
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/" className="mr-4 hover:underline md:mr-6">
               {t('home')}
             </a>
           </li>
