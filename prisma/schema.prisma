@@ -13,6 +13,17 @@ enum Role {
   MEMBER
 }
 
+model BugBashSession {
+  id          String   @id @default(uuid())
+  name        String
+  createdAt   DateTime
+  description String
+  teamId      String
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  team        Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+}
+
 model Account {
   id                String  @id @default(uuid())
   userId            String
@@ -67,6 +78,7 @@ model User {
   accounts    Account[]
   sessions    Session[]
   invitations Invitation[]
+  bugBashSessions BugBashSession[]
 }
 
 model Team {
@@ -84,6 +96,7 @@ model Team {
   apiKeys         ApiKey[]
 
   @@index([billingId])
+  BugBashSession BugBashSession[]
 }
 
 model TeamMember {
